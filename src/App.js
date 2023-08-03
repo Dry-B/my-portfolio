@@ -26,7 +26,6 @@ const App = () => {
 const Body = styled.div`
   /* global styles */
   color: white;
-  background-color: #00000f;
   height: 100vh;
   font-family: 'Poppins';
 `;

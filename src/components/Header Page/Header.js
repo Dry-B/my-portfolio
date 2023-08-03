@@ -5,7 +5,9 @@ import menu from './icons/menu.png';
 const Header = () => {
   return (
     <Container>
-      <div>Brendan's Portfolio</div>
+      <Link to="/" style={linkStyle}>
+        Brendan's Portfolio
+      </Link>
       <List>
         <li>
           <Link to="/projects" style={linkStyle}>
@@ -24,17 +26,23 @@ const Header = () => {
         </li>
       </List>
       <Link to="/" style={linkStyle}>
-        <img src={menu} width="15px" height="15px" />
+        <MenuIcon src={menu} />
       </Link>
     </Container>
   );
 };
+
+const MenuIcon = styled.img`
+  width: 15px;
+  height: 15px;
+`;
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 60px;
   padding: 10px;
+  position: relative;
 `;
 const List = styled.ul`
   list-style-type: none;
@@ -42,8 +50,9 @@ const List = styled.ul`
   justify-content: space-between;
   width: 300px;
   text-decoration: none;
+  position: absolute;
+  left: 42%;
 `;
-
 const linkStyle = {
   cursor: 'default',
   textDecoration: 'none',

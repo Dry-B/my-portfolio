@@ -1,7 +1,7 @@
 const maincontent = [
-  { content: 'Hi, My name is Brendan!' },
-  { content: 'I like to code!' },
-  { content: 'This is a website!' },
+  { id: 1, content: 'Hi, My name is Brendan!' },
+  { id: 2, content: 'I like to code!' },
+  { id: 3, content: 'This is a website!' },
 ];
 
-export { maincontent };
+export default maincontent;
