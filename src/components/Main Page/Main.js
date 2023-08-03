@@ -1,3 +1,5 @@
+import maincontent from './maincontent';
+
 const Main = () => {
   return (
     <div>
