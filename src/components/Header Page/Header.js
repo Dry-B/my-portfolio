@@ -35,6 +35,7 @@ const Header = () => {
 const MenuIcon = styled.img`
   width: 15px;
   height: 15px;
+  padding-top: 5px;
 `;
 
 const Container = styled.div`
@@ -51,7 +52,7 @@ const List = styled.ul`
   width: 300px;
   text-decoration: none;
   position: absolute;
-  left: 42%;
+  left: 40%;
 `;
 const linkStyle = {
   cursor: 'default',

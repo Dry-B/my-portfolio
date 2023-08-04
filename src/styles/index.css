@@ -20,3 +20,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
   background-color: #00000f;
 }
+body{
+	display: flex;
+	justify-content: center;
+}
+#root {
+	width: 90%;
+}
