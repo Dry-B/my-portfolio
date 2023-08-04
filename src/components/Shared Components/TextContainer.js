@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-const Item = (item) => {
-  return <Container>{item.item.content}</Container>;
+const TextContainer = (text) => {
+  return (
+    <>
+      <Container>{text.text.content}</Container>
+    </>
+  );
 };
 
 const Container = styled.div`
@@ -11,4 +15,4 @@ const Container = styled.div`
   margin: 50px;
 `;
 
-export { Item };
+export { TextContainer };

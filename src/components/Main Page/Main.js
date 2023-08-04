@@ -1,12 +1,17 @@
 import maincontent from './maincontent';
-import { Item } from '../Shared Components/Item';
+import { TextContainer } from '../Shared Components/TextContainer';
+import { ContentContainer } from '../Shared Components/ContentContainer';
 import styled from 'styled-components';
 
 const Main = () => {
   return (
     <>
-      {maincontent.map((item) => {
-        return <Item key={item.id} item={item} />;
+      {maincontent.map((content) => {
+        return content.type === 'text' ? (
+          <TextContainer key={content.id} text={content} />
+        ) : (
+          <ContentContainer key={content.id} content={content} />
+        );
       })}
     </>
   );
