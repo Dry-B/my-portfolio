@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import menu from './icons/menu.png';
+import { Icon } from '@iconify/react';
 
 const Header = () => {
   return (
@@ -26,17 +26,11 @@ const Header = () => {
         </li>
       </List>
       <Link to="/" style={linkStyle}>
-        <MenuIcon src={menu} />
+        <Icon icon="ion:menu" style={iconStyle} />
       </Link>
     </Container>
   );
 };
-
-const MenuIcon = styled.img`
-  width: 15px;
-  height: 15px;
-  padding-top: 5px;
-`;
 
 const Container = styled.div`
   display: flex;
@@ -58,6 +52,11 @@ const linkStyle = {
   cursor: 'default',
   textDecoration: 'none',
   color: 'white',
+};
+const iconStyle = {
+  width: '15px',
+  aspectRatio: '1/1',
+  paddingTop: '5px',
 };
 
 export { Header };
