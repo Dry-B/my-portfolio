@@ -12,7 +12,7 @@ const Container = styled.div`
   text-align: center;
   font-weight: bolder;
   font-size: larger;
-  margin: 50px;
+  margin: 150px;
 `;
 
 export { TextContainer };

@@ -1,7 +1,18 @@
 const maincontent = [
-  { id: 1, type: 'text', content: 'Hi, My name is Brendan!' },
-  { id: 2, type: 'box', content: 'I like to code!' },
-  { id: 3, type: 'gallery', content: 'This is a website!' },
+  { id: 1, type: 'text', content: 'Welcome to my portfolio!' },
+  {
+    id: 2,
+    type: 'text',
+    content: 'I made this website to demonstrate the power of coding.',
+  },
+  { id: 3, type: 'text', content: 'Let me tell you a little about it...' },
+  {
+    id: 4,
+    type: 'box',
+    title: 'The power of React.JS',
+    content:
+      'This website was created using the React Framework. This incredible tool was created by Facebook in 2011 to elevate UI development and create high level scaling possibilities that had never existed in the industry before.',
+  },
 ];
 
 export default maincontent;
