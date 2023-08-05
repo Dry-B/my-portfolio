@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { aboutcontent } from './aboutcontent';
-import profile from './images/cat.jpg';
+import profile from './assets/cat.jpg';
 import { Text } from '../Shared Components/Text';
 import { Box } from '../Shared Components/Box';
 import { Gallery } from '../Shared Components/Gallery';
@@ -37,6 +37,7 @@ const ProfileImage = styled.img`
   position: absolute;
   left: 6%;
   border-radius: 5px;
+  z-index: 10;
 `;
 const TitleAndImage = styled.div`
   font-size: x-large;

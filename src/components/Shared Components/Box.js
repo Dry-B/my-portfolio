@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Icon } from '@iconify/react';
 
 const Box = (content) => {
   return (
@@ -6,6 +7,7 @@ const Box = (content) => {
       <StyledBox>
         <Title>{content.content.title}</Title>
         <Text>{content.content.content}</Text>
+        <Icon icon={content.content.icon} style={iconStyle} />
       </StyledBox>
     </Container>
   );
@@ -28,9 +30,17 @@ const Container = styled.div`
 `;
 const StyledBox = styled.div`
   background-color: #36393e;
-  padding: 20px 40px 30px 40px;
+  padding: 20px 40px 80px 40px;
   border-radius: 5px;
   width: 75%;
+  position: relative;
 `;
+
+const iconStyle = {
+  position: 'absolute',
+  width: '40%',
+  height: '40%',
+  left: '30%',
+};
 
 export { Box };

@@ -24,6 +24,4 @@ const Main = () => {
   );
 };
 
-const MainElement = styled.div``;
-
 export { Main };
