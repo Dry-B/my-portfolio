@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const TextContainer = (text) => {
+const Text = (text) => {
   return (
     <>
       <Container>{text.text.content}</Container>
@@ -12,7 +12,7 @@ const Container = styled.div`
   text-align: center;
   font-weight: bolder;
   font-size: larger;
-  margin: 150px;
+  margin: 130px;
 `;
 
-export { TextContainer };
+export { Text };

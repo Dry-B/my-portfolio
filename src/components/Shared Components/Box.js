@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const ContentContainer = (content) => {
+const Box = (content) => {
   return (
     <Container>
-      <Box>
+      <StyledBox>
         <Title>{content.content.title}</Title>
         <Text>{content.content.content}</Text>
-      </Box>
+      </StyledBox>
     </Container>
   );
 };
@@ -26,11 +26,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
 `;
-const Box = styled.div`
+const StyledBox = styled.div`
   background-color: #36393e;
   padding: 20px 40px 30px 40px;
   border-radius: 5px;
   width: 75%;
 `;
 
-export { ContentContainer };
+export { Box };

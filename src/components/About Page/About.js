@@ -1,26 +1,29 @@
 import styled from 'styled-components';
 import { aboutcontent } from './aboutcontent';
 import profile from './images/cat.jpg';
-import { ContentContainer } from '../Shared Components/ContentContainer';
+import { Box } from '../Shared Components/Box';
 
 const About = () => {
   return (
     <>
       <TitleAndImage>
-        <div>About Me</div>
+        <Title>About Me</Title>
         <ProfileImage src={profile} />
       </TitleAndImage>
       {aboutcontent.map((content) => {
         return content.type === 'text' ? null : (
-          <ContentContainer key={content.id} content={content} />
+          <Box key={content.id} content={content} />
         );
       })}
     </>
   );
 };
 
+const Title = styled.div`
+margin-left:6%;
+`
 const ProfileImage = styled.img`
-  width: 15%;
+  width: 10%;
   position: absolute;
   left: 6%;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 import maincontent from './maincontent';
-import { TextContainer } from '../Shared Components/TextContainer';
-import { ContentContainer } from '../Shared Components/ContentContainer';
+import { Text } from '../Shared Components/Text';
+import { Box } from '../Shared Components/Box';
 import styled from 'styled-components';
 
 const Main = () => {
@@ -8,9 +8,9 @@ const Main = () => {
     <>
       {maincontent.map((content) => {
         return content.type === 'text' ? (
-          <TextContainer key={content.id} text={content} />
+          <Text key={content.id} text={content} />
         ) : (
-          <ContentContainer key={content.id} content={content} />
+          <Box key={content.id} content={content} />
         );
       })}
     </>
