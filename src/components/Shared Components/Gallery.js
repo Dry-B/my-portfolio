@@ -1,9 +1,5 @@
 const Gallery = (content) => {
-  return (
-    <>
-      <div>Gallery</div>
-    </>
-  );
+  return <>{<div>{content.content.content}</div>}</>;
 };
 
 export { Gallery };

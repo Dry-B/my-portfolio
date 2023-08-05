@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const Text = (text) => {
+const Text = (content) => {
   return (
     <>
-      <Container>{text.text.content}</Container>
+      <Container>{content.content.content}</Container>
     </>
   );
 };
