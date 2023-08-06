@@ -9,9 +9,20 @@ const Gallery = (content) => {
           <Title>{content.content.title}</Title>
           <Body>{content.content.content}</Body>
           <ImageContainer>
-            {content.content.images.map((image) => {
-              return <Icon key={image} icon={image} style={styledIcons} />;
-            })}
+            {!content.content.images
+              ? content.content.icons.map((element) => {
+                  return (
+                    <Icon key={element} icon={element} style={styledIcons} />
+                  );
+                })
+              : content.content.images.map((element) => {
+                  return (
+                    <div key={element.name}>
+                      <div>{element.name}</div>
+                      <ScreenShot src={element.src} />
+                    </div>
+                  );
+                })}
           </ImageContainer>
         </Container>
       }
@@ -26,12 +37,17 @@ const ImageContainer = styled.div`
 const Title = styled.div`
   font-weight: bolder;
   font-size: larger;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 `;
-const Body = styled.div``;
+const Body = styled.div`
+  margin-bottom: 10px;
+`;
 const Container = styled.div`
-  margin: 200px 0px 200px 0px;
+  margin: 20px 20px 300px 20px;
   text-align: center;
+`;
+const ScreenShot = styled.img`
+  max-width: 80%;
 `;
 const styledIcons = {
   width: '80px',

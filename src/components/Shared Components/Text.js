@@ -11,7 +11,7 @@ const Text = (content) => {
 
 const Container = styled.div`
   text-align: center;
-  margin: 200px 0px 200px 0px;
+  margin: 20px 20px 300px 20px;
 `;
 const Title = styled.div`
   font-weight: bolder;

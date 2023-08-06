@@ -19,7 +19,7 @@ const maincontent = [
     title: 'It combines the best of 3 different languages',
     content:
       'HTML, CSS, and JavaScript were the building blocks for this project.',
-    images: [
+    icons: [
       'vscode-icons:file-type-html',
       'vscode-icons:file-type-css',
       'arcticons:learn-javascript',
@@ -50,8 +50,8 @@ const maincontent = [
     type: 'gallery',
     title: 'React brings it all together',
     content:
-      'With this we can bring all three together and scale to unimaginable heights. Here are some popular apps using these exact tools:',
-    images: [
+      'Now we can bring all three together and scale to unimaginable heights. Here are some popular sites using this framework:',
+    icons: [
       'devicon:facebook',
       'skill-icons:instagram',
       'logos:airbnb',

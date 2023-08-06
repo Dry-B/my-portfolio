@@ -2,11 +2,12 @@ const projectscontent = [
   {
     id: 1,
     type: 'gallery',
-    title: "A few projects I've completed:",
+    title: "Here are some projects I've created:",
+    content: 'Click below for more details!',
     images: [
-      'vscode-icons:file-type-html',
-      'vscode-icons:file-type-css',
-      'arcticons:learn-javascript',
+      { name: 'Cookie Clicker', src: 'assets/cookie-screenshot.png' },
+      { name: 'Poket-Monsters', src: 'assets/poketmonster-screenshot.png' },
+      { name: 'This Portfolio', src: 'assets/portfolio-code-screenshot.png' },
     ],
   },
 ];

@@ -33,7 +33,8 @@ const Title = styled.div`
   margin-left: 6%;
 `;
 const ProfileImage = styled.img`
-  width: 10%;
+  max-width: 320%;
+  max-height: 320%;
   position: absolute;
   left: 6%;
   border-radius: 5px;
@@ -42,5 +43,6 @@ const ProfileImage = styled.img`
 const TitleAndImage = styled.div`
   font-size: x-large;
   position: relative;
+  margin: 0px 0px 40px 20px;
 `;
 export { About };

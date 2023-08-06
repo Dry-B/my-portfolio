@@ -24,7 +24,7 @@ const Text = styled.div`
 `;
 const Container = styled.div`
   text-align: center;
-  margin: 200px 0px 200px 0px;
+  margin: 20px 20px 300px 20px;
   display: flex;
   justify-content: center;
 `;
@@ -38,6 +38,7 @@ const StyledBox = styled.div`
 
 const iconStyle = {
   position: 'absolute',
+  marginTop: '10px',
   width: '40%',
   height: '40%',
   left: '30%',
