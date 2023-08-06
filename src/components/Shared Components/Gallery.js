@@ -7,9 +7,10 @@ const Gallery = (content) => {
       {
         <Container>
           <Title>{content.content.title}</Title>
+          <Body>{content.content.content}</Body>
           <ImageContainer>
             {content.content.images.map((image) => {
-              return <Icon key={image} icon={image} style={styledImages} />;
+              return <Icon key={image} icon={image} style={styledIcons} />;
             })}
           </ImageContainer>
         </Container>
@@ -23,13 +24,18 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 const Title = styled.div`
+  font-weight: bolder;
+  font-size: larger;
+  margin-bottom: 25px;
+`;
+const Body = styled.div``;
+const Container = styled.div`
+  margin: 200px 0px 200px 0px;
   text-align: center;
 `;
-const Container = styled.div`
-  border: solid green 2px;
-`;
-const styledImages = {
-  width: '50px',
-  aspectRatio: '1/1',
+const styledIcons = {
+  width: '80px',
+  height: '80px',
+  margin: '40px',
 };
 export { Gallery };

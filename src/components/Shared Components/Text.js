@@ -2,17 +2,23 @@ import styled from 'styled-components';
 
 const Text = (content) => {
   return (
-    <>
-      <Container>{content.content.content}</Container>
-    </>
+    <Container>
+      <Title>{content.content.title}</Title>
+      <Body>{content.content.content}</Body>
+    </Container>
   );
 };
 
 const Container = styled.div`
   text-align: center;
+  margin: 200px 0px 200px 0px;
+`;
+const Title = styled.div`
   font-weight: bolder;
   font-size: larger;
-  margin: 130px;
+`;
+const Body = styled.div`
+  margin: 10px;
 `;
 
 export { Text };

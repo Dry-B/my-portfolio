@@ -24,13 +24,13 @@ const Text = styled.div`
 `;
 const Container = styled.div`
   text-align: center;
-  margin: 50px;
+  margin: 200px 0px 200px 0px;
   display: flex;
   justify-content: center;
 `;
 const StyledBox = styled.div`
   background-color: #36393e;
-  padding: 20px 40px 80px 40px;
+  padding: 20px 40px 60px 40px;
   border-radius: 5px;
   width: 75%;
   position: relative;
