@@ -17,8 +17,6 @@ const Title = styled.div`
   font-weight: bolder;
   font-size: larger;
 `;
-const Body = styled.div`
-  margin: 10px;
-`;
+const Body = styled.div``;
 
 export { Text };

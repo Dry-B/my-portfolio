@@ -3,7 +3,11 @@ const projectscontent = [
     id: 1,
     type: 'gallery',
     title: "A few projects I've completed:",
-    images: ['logos:html-5', 'logos:css-3', 'logos:javascript'],
+    images: [
+      'vscode-icons:file-type-html',
+      'vscode-icons:file-type-css',
+      'arcticons:learn-javascript',
+    ],
   },
 ];
 export { projectscontent };
