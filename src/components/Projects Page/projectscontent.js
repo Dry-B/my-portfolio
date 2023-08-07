@@ -1,13 +1,25 @@
 const projectscontent = [
   {
-    id: 1,
+    id: 'projectlist',
     type: 'gallery',
     title: "Here are some projects I've created:",
-    content: 'Click below for more details!',
+    content: 'Click one for more details!',
     images: [
-      { name: 'Cookie Clicker', src: 'assets/cookie-screenshot.png' },
-      { name: 'Poket-Monsters', src: 'assets/poketmonster-screenshot.png' },
-      { name: 'This Portfolio', src: 'assets/portfolio-code-screenshot.png' },
+      {
+        id: 'cookieclicker',
+        name: 'Cookie Clicker',
+        src: 'assets/cookie-screenshot.png',
+      },
+      {
+        id: 'poketmonsters',
+        name: 'Poket-Monsters',
+        src: 'assets/poketmonster-screenshot.png',
+      },
+      {
+        id: 'portfolio',
+        name: 'This Portfolio',
+        src: 'assets/portfolio-code-screenshot.png',
+      },
     ],
   },
 ];

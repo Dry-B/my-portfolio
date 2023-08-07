@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 
 const Gallery = (content) => {
   return (
@@ -17,10 +18,14 @@ const Gallery = (content) => {
                 })
               : content.content.images.map((element) => {
                   return (
-                    <div key={element.name}>
+                    <Link
+                      to={`/projects/${element.id}`}
+                      key={element.name}
+                      style={styledLink}
+                    >
                       <div>{element.name}</div>
                       <ScreenShot src={element.src} />
-                    </div>
+                    </Link>
                   );
                 })}
           </ImageContainer>
@@ -53,5 +58,10 @@ const styledIcons = {
   width: '80px',
   height: '80px',
   margin: '40px',
+};
+const styledLink = {
+  cursor: 'default',
+  textDecoration: 'none',
+  color: 'white',
 };
 export { Gallery };

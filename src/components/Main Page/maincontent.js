@@ -1,12 +1,12 @@
 const maincontent = [
   {
-    id: 1,
+    id: 'welcome',
     type: 'text',
     title: 'Welcome to my portfolio!',
     content: 'Scroll down to see more.',
   },
   {
-    id: 2,
+    id: 'intro',
     type: 'box',
     title: 'This website was made with React',
     content:
@@ -14,7 +14,7 @@ const maincontent = [
     icon: 'vscode-icons:file-type-reactjs',
   },
   {
-    id: 3,
+    id: 'languages',
     type: 'gallery',
     title: 'It combines the best of 3 different languages',
     content:
@@ -26,27 +26,27 @@ const maincontent = [
     ],
   },
   {
-    id: 4,
+    id: 'html',
     type: 'text',
     title: 'HTML provides structure',
     content: 'Used when defining the basic structure of a web page',
   },
   {
-    id: 5,
+    id: 'css',
     type: 'text',
     title: 'CSS handles the presentation',
     content:
       'This powerful language is used to control the presentation and layout of those HTML documents',
   },
   {
-    id: 6,
+    id: 'js',
     type: 'text',
     title: 'JavaScript drives the functionality',
     content:
       'This versatile programming language enables us to create dynamic and interactive content out of everything!',
   },
   {
-    id: 7,
+    id: 'react',
     type: 'gallery',
     title: 'React brings it all together',
     content:

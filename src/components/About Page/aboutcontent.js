@@ -1,6 +1,6 @@
 const aboutcontent = [
   {
-    id: 1,
+    id: 'about',
     type: 'box',
     title: 'A software developer',
     content:
