@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 
+// This component takes an array of objects and returns a document of styled elements.
+// Objects can contain title, content, multiple icons OR multiple images.
+// If images, please create a nested array of objects with name and src.
 const Gallery = (content) => {
   return (
     <>

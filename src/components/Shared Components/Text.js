@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// This component takes an array of objects and returns a document of styled elements.
+// Objects can contain title and content.
 const Text = (content) => {
   return (
     <Container>

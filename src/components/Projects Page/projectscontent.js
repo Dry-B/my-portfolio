@@ -5,6 +5,7 @@ import poketmonsterimg from './assets/poketmonstertile.png';
 import portfoliogif from './assets/portfoliogif.gif';
 import portfolioimg from './assets/portfoliotile.png';
 
+// Content to be displayed on the Projects Page.
 const projectscontent = [
   {
     id: 'projectlist',

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
 
+// This component takes an array of objects and returns a document of styled elements.
+// Objects can contain title, content, 1 x icon.
 const Box = (content) => {
   return (
     <Container>
