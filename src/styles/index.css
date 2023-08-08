@@ -23,7 +23,7 @@ time, mark, audio, video {
 body{
 	display: flex;
 	justify-content: center;
-	margin-bottom: 30%;
+	margin-bottom: 50px;
 }
 #root {
 	width: 90%;

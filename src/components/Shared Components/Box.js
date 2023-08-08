@@ -14,13 +14,13 @@ const Box = (content) => {
 };
 
 const Title = styled.div`
-  background-color: #36393e;
+  background-color: #343436;
   font-weight: bolder;
   font-size: larger;
   margin-bottom: 25px;
 `;
 const Text = styled.div`
-  background-color: #36393e;
+  background-color: #343436;
 `;
 const Container = styled.div`
   text-align: center;
@@ -29,7 +29,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 const StyledBox = styled.div`
-  background-color: #36393e;
+  background-color: #343436;
   padding: 20px 40px 60px 40px;
   border-radius: 5px;
   width: 75%;

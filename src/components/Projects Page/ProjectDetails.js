@@ -7,7 +7,9 @@ const ProjectDetails = () => {
 
   return (
     <>
-      <div>Project Details Here</div>
+      <img
+        src={projectscontent[0].images.find((img) => img.id === projectId).gif}
+      />
     </>
   );
 };

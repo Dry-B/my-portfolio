@@ -1,3 +1,10 @@
+import cookiegif from './assets/cookieclickergif.gif';
+import cookieimg from './assets/cookietile.png';
+import poketmonstergif from './assets/poketmonstergif.gif';
+import poketmonsterimg from './assets/poketmonstertile.png';
+import portfoliogif from './assets/portfoliogif.gif';
+import portfolioimg from './assets/portfoliotile.png';
+
 const projectscontent = [
   {
     id: 'projectlist',
@@ -8,17 +15,20 @@ const projectscontent = [
       {
         id: 'cookieclicker',
         name: 'Cookie Clicker',
-        src: 'assets/cookie-screenshot.png',
+        src: cookieimg,
+        gif: cookiegif,
       },
       {
         id: 'poketmonsters',
         name: 'Poket-Monsters',
-        src: 'assets/poketmonster-screenshot.png',
+        src: poketmonsterimg,
+        gif: poketmonstergif,
       },
       {
         id: 'portfolio',
         name: 'This Portfolio',
-        src: 'assets/portfolio-code-screenshot.png',
+        src: portfolioimg,
+        gif: portfoliogif,
       },
     ],
   },

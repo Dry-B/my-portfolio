@@ -33,7 +33,7 @@ const Header = () => {
 };
 
 const Container = styled.div`
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   display: flex;
   justify-content: space-between;
   height: 60px;
@@ -52,7 +52,7 @@ const List = styled.ul`
 const linkStyle = {
   cursor: 'default',
   textDecoration: 'none',
-  color: 'white',
+  color: '#dadada',
 };
 const iconStyle = {
   width: '15px',
