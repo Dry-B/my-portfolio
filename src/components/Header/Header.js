@@ -33,12 +33,13 @@ const Header = () => {
 };
 
 const Container = styled.div`
-  margin-bottom: 150px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: 40px;
   padding: 10px;
   position: relative;
+  border-bottom: solid #dadada 1px;
 `;
 const List = styled.ul`
   list-style-type: none;
@@ -50,7 +51,6 @@ const List = styled.ul`
   left: 40%;
 `;
 const linkStyle = {
-  cursor: 'default',
   textDecoration: 'none',
   color: '#dadada',
 };

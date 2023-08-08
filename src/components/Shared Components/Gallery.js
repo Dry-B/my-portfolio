@@ -53,6 +53,7 @@ const Container = styled.div`
 `;
 const ScreenShot = styled.img`
   max-width: 80%;
+  border-radius: 5px;
 `;
 const styledIcons = {
   width: '80px',
@@ -60,7 +61,6 @@ const styledIcons = {
   margin: '40px',
 };
 const styledLink = {
-  cursor: 'default',
   textDecoration: 'none',
   color: 'white',
 };
