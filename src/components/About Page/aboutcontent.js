@@ -20,7 +20,7 @@ const aboutcontent = [
     content: "I've even gathered a couple of formal diploma's along the way. ",
     images: [
       {
-        name: 'Information Technology + Networking',
+        name: 'Information Technology + Networks',
         src: 'Insert Diplomas Here',
       },
       { name: 'Full Stack Web Development', src: 'Insert Diploma Here' },
