@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header/Header';
-import { Main } from './components/Main Page/Main';
-import { About } from './components/About Page/About';
-import { Projects } from './components/Projects Page/Projects';
-import { ProjectDetails } from './components/Projects Page/ProjectDetails';
-import { Contact } from './components/Contact Page/Contact';
+import { Main } from './components/Main/Main';
+import { About } from './components/About/About';
+import { Projects } from './components/Projects/Projects';
+import { ProjectDetails } from './components/Projects/ProjectDetails';
+import { Contact } from './components/Contact/Contact';
 
 const App = () => {
+  console.log();
   return (
     <Body>
       <Router>
