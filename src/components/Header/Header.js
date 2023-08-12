@@ -6,9 +6,6 @@ import { Icon } from '@iconify/react';
 const Header = () => {
   return (
     <Container>
-      <Link to="/" style={linkStyle}>
-        Brendan's Portfolio
-      </Link>
       <List>
         <li>
           <Link to="/projects" style={linkStyle}>
