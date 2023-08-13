@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
-// This component is presented at the top of the page with links to other components.
 const Header = () => {
   return (
     <Container>

@@ -4,7 +4,6 @@ import { Box } from '../Shared Components/Box';
 import { Gallery } from '../Shared Components/Gallery';
 import styled from 'styled-components';
 
-// This component loops through the array in maincontent.js and renders the appropriate component based on type.
 const Main = () => {
   return (
     <>

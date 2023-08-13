@@ -21,10 +21,10 @@ const Canvas = () => {
 const AboutButton = styled.button`
   width: 7rem;
   height: 2rem;
-  margin: 1rem;
+  margin: 1rem 0rem 6rem 0rem;
 `;
 const Description = styled.div`
-  font-size: large;
+  font-size: x-large;
 `;
 const Intro = styled.div`
   font-size: xx-large;

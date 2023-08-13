@@ -3,7 +3,6 @@ import { Gallery } from '../Shared Components/Gallery';
 import { Text } from '../Shared Components/Text';
 import { Box } from '../Shared Components/Box';
 
-// This component loops through the array in projectcontent.js and renders the appropriate component based on type.
 const Projects = () => {
   return (
     <>

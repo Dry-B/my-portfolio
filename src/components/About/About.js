@@ -5,7 +5,6 @@ import { Text } from '../Shared Components/Text';
 import { Box } from '../Shared Components/Box';
 import { Gallery } from '../Shared Components/Gallery';
 
-// This component loops through the array in aboutcontent.js and renders the appropriate component based on type.
 const About = () => {
   return (
     <>
