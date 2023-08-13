@@ -6,22 +6,34 @@ const Canvas = () => {
     <>
       <Container>
         <Message>
-          <Intro>Hi, Im Brendan.</Intro>
+          <Intro>
+            Hi, Im <Me>Brendan</Me>.
+          </Intro>
           <Description>A Full-Stack Web Developer.</Description>
-          <Link to="/about">
-            {' '}
-            <AboutButton>About Me</AboutButton>
-          </Link>
+          <ButtonContainer>
+            <Link to="/about">
+              <AboutButton>About Me</AboutButton>
+            </Link>
+          </ButtonContainer>
         </Message>
       </Container>
     </>
   );
 };
 
+const ButtonContainer = styled.div``;
+const Me = styled.span`
+  color: #7289da;
+`;
 const AboutButton = styled.button`
   width: 7rem;
-  height: 2rem;
+  height: 2.5rem;
   margin: 1rem 0rem 6rem 0rem;
+  border: solid #7289da 3px;
+  background-color: #1e2124;
+  border-radius: 5px;
+  color: #dadada;
+  font-size: large;
 `;
 const Description = styled.div`
   font-size: x-large;
