@@ -1,60 +1,61 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Icon } from '@iconify/react';
 
 const Header = () => {
   return (
     <Container>
       <List>
-        <li>
-          <Link to="/projects" style={linkStyle}>
-            Projects
+        <ListItem>
+          <Link to="/" style={linkStyle}>
+            Home
           </Link>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Link to="/about" style={linkStyle}>
             About
           </Link>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
+          <Link to="/projects" style={linkStyle}>
+            Projects
+          </Link>
+        </ListItem>
+
+        <ListItem>
           <Link to="/contact" style={linkStyle}>
             Contact
           </Link>
-        </li>
+        </ListItem>
       </List>
-      <Link to="/" style={linkStyle}>
-        <Icon icon="ion:menu" style={iconStyle} />
-      </Link>
     </Container>
   );
 };
 
+const ListItem = styled.li``;
 const Container = styled.div`
   margin-bottom: 80px;
   display: flex;
-  justify-content: space-between;
-  height: 40px;
+  justify-content: right;
+  height: 3rem;
   padding: 10px;
-  position: relative;
-  border-bottom: solid #dadada 1px;
+  background: #36393e;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 `;
 const List = styled.ul`
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
-  width: 300px;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  position: absolute;
-  left: 40%;
 `;
 const linkStyle = {
   textDecoration: 'none',
   color: '#dadada',
-};
-const iconStyle = {
-  width: '15px',
-  aspectRatio: '1/1',
-  paddingTop: '5px',
+  margin: '2rem',
 };
 
 export { Header };

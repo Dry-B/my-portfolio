@@ -27,12 +27,12 @@ const App = () => {
 };
 
 const Body = styled.div`
-  /* global styles */
   color: #dadada;
   font-family: 'Poppins';
   padding-top: 1%;
   display: flex;
   flex-direction: column;
+  background: #1e2124;
 `;
 
 export default App;
