@@ -37,7 +37,6 @@ const Container = styled.div`
   justify-content: center;
   display: grid;
   text-align: center;
-  margin: 5rem;
   padding-top: 7rem;
 `;
 const Form = styled.div`

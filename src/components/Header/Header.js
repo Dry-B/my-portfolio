@@ -32,7 +32,6 @@ const Header = () => {
 
 const ListItem = styled.li``;
 const Container = styled.div`
-  margin-bottom: 80px;
   display: flex;
   justify-content: right;
   height: 3rem;

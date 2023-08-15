@@ -12,8 +12,7 @@ const Text = (content) => {
 };
 
 const Container = styled.div`
-  text-align: center;
-  margin: 20px 20px 300px 20px;
+  width: 40%;
 `;
 const Title = styled.div`
   font-weight: bolder;
