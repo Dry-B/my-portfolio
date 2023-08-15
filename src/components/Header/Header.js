@@ -1,30 +1,29 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
   return (
     <Container>
       <List>
         <ListItem>
-          <Link to="/" style={linkStyle}>
-            Home
-          </Link>
+          <StyledLink smooth to="#top">
+            Top
+          </StyledLink>
         </ListItem>
         <ListItem>
-          <Link to="/about" style={linkStyle}>
+          <StyledLink smooth to="/#about">
             About
-          </Link>
+          </StyledLink>
         </ListItem>
         <ListItem>
-          <Link to="/projects" style={linkStyle}>
+          <StyledLink smooth to="/#projects">
             Projects
-          </Link>
+          </StyledLink>
         </ListItem>
-
         <ListItem>
-          <Link to="/contact" style={linkStyle}>
+          <StyledLink smooth to="/#contact">
             Contact
-          </Link>
+          </StyledLink>
         </ListItem>
       </List>
     </Container>
@@ -52,10 +51,10 @@ const List = styled.ul`
   align-items: center;
   text-decoration: none;
 `;
-const linkStyle = {
-  textDecoration: 'none',
-  color: '#dadada',
-  margin: '2rem',
-};
+const StyledLink = styled(HashLink)`
+  text-decoration: none;
+  color: #dadada;
+  margin: 2rem;
+`;
 
 export { Header };

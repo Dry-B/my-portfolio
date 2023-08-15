@@ -1,7 +1,13 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { useSpring, animated } from '@react-spring/web';
+import { HashLink } from 'react-router-hash-link';
 
 const Canvas = () => {
+  const fadeIn = useSpring({
+    from: { opacity: 0, x: '0' },
+    to: { opacity: 1, x: '1' },
+  });
+
   return (
     <>
       <Container>
@@ -9,11 +15,11 @@ const Canvas = () => {
           <Intro>
             Hi, Im <Me>Brendan</Me>.
           </Intro>
-          <Description>A Full-Stack Web Developer.</Description>
+          <Description>A Web Full-Stack Web Developer.</Description>
           <ButtonContainer>
-            <Link to="/about">
-              <AboutButton>About Me</AboutButton>
-            </Link>
+            <HashLink smooth to="/#about">
+              <AboutButton style={fadeIn}>About Me</AboutButton>
+            </HashLink>
           </ButtonContainer>
         </Message>
       </Container>
@@ -25,7 +31,7 @@ const ButtonContainer = styled.div``;
 const Me = styled.span`
   color: #7289da;
 `;
-const AboutButton = styled.button`
+const AboutButton = styled(animated.button)`
   width: 7rem;
   height: 2.5rem;
   margin: 1rem 0rem 6rem 0rem;

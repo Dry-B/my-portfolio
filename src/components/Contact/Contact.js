@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id="contact">
       <Title>Contact Me</Title>
       <Form>
         <Wrapper>
@@ -30,13 +30,15 @@ const Wrapper = styled.div`
 `;
 const Label = styled.label``;
 const Input = styled.input`
-  width: 210px;
-  border-radius: 3px;
+  width: 15rem;
+  border-radius: 0.2rem;
 `;
 const Container = styled.div`
   justify-content: center;
   display: grid;
   text-align: center;
+  margin: 5rem;
+  padding-top: 7rem;
 `;
 const Form = styled.div`
   width: 110%;

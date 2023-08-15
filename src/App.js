@@ -16,10 +16,6 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:projectId" element={<ProjectDetails />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </Body>
@@ -29,7 +25,7 @@ const App = () => {
 const Body = styled.div`
   color: #dadada;
   font-family: 'Poppins';
-  padding-top: 1%;
+  padding-bottom: 30vh;
   display: flex;
   flex-direction: column;
   background: #1e2124;

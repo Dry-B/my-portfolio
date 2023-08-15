@@ -7,7 +7,7 @@ import { Gallery } from '../Shared Components/Gallery';
 
 const About = () => {
   return (
-    <>
+    <Container id="about">
       <TitleAndImage>
         <Title>About Me</Title>
         <ProfileImage src={profile} />
@@ -25,10 +25,14 @@ const About = () => {
             break;
         }
       })}
-    </>
+    </Container>
   );
 };
 
+const Container = styled.div`
+  margin: 5rem;
+  padding-top: 7rem;
+`;
 const Title = styled.div`
   margin-left: 6%;
 `;
