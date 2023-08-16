@@ -1,24 +1,12 @@
 import styled from 'styled-components';
-import { useParams, Link } from 'react-router-dom';
 import { projectscontent } from './projectscontent';
-import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
+import { BackDrop } from '../Shared Components/BackDrop';
 
-const ProjectDetails = () => {
-  const { projectId } = useParams();
-
+const ProjectDetails = ({ handleClose, projectId }) => {
   return (
-    <>
-      <TitleandReturn>
-        <Link to={`/projects`}>
-          <Icon
-            icon="icon-park-outline:return"
-            color="#dadada"
-            style={returnStyle}
-          />
-        </Link>
-        <PageTitle>Project Details</PageTitle>
-      </TitleandReturn>
-      <InfoContainer>
+    <BackDrop onClick={handleClose}>
+      <InfoContainer onClick={(e) => e.stopPropagation()}>
         <GifContainer>
           <Gif
             src={
@@ -44,7 +32,7 @@ const ProjectDetails = () => {
           </InfoBody>
         </Info>
       </InfoContainer>
-    </>
+    </BackDrop>
   );
 };
 const GifContainer = styled.div`
@@ -56,16 +44,13 @@ const InfoBodyParagraph = styled.div`
 const Info = styled.div`
   width: 45%;
 `;
-const PageTitle = styled.div`
-  font-size: x-large;
-`;
-const TitleandReturn = styled.div`
+const InfoContainer = styled(motion.div)`
   display: flex;
-  justify-content: left;
-  margin: 0px 20px 20px 20px;
-`;
-const InfoContainer = styled.div`
-  display: flex;
+  width: clamp(50%, 700px, 90%);
+  height: min(50%, 300px);
+  margin: auto;
+  padding: 0 2rem;
+  border-radius: 1rem;
 `;
 const InfoTitle = styled.div`
   font-weight: bolder;
@@ -77,8 +62,5 @@ const Gif = styled.img`
   border-radius: 5px;
   width: 100%;
 `;
-const returnStyle = {
-  padding: '10px',
-};
 
 export { ProjectDetails };

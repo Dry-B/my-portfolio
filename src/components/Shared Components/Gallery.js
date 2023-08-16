@@ -1,55 +1,61 @@
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ProjectDetails } from '../Projects/ProjectDetails';
 
 // This component takes an array of objects and returns a document of styled elements.
 // Objects can contain title, content, multiple icons OR multiple images.
 // If images, please create a nested array of objects with name and src.
 const Gallery = (content) => {
+  const [projectDetails, setprojectDetails] = useState(false);
+
   return (
     <Container>
       <Title>{content.content.title}</Title>
       <Text>{content.content.content}</Text>
       <ImageContainer>
-        {!content.content.images
-          ? content.content.icons.map((element) => {
-              return (
-                <IconList>
-                  <IconAndName>
-                    <Icon
-                      key={element.name}
-                      icon={element.src}
-                      style={styledIcons}
-                    />
-                    <IconName>{element.name}</IconName>
-                  </IconAndName>
-                </IconList>
-              );
-            })
-          : content.content.images.map((element) => {
-              return (
-                <ImageInfoContainer>
-                  <Link
-                    to={`/projects/${element.id}`}
-                    key={element.name}
-                    style={styledLink}
-                  >
-                    <ScreenShot src={element.src} />
-                  </Link>
-                  <ImageInfo>
-                    <TitleAndDescription>
-                      <ImageInfoTitle>{element.name}</ImageInfoTitle>
-                      <ImageInfoDescription>
-                        {element.intro}
-                      </ImageInfoDescription>
-                    </TitleAndDescription>
-                    <PlayButton>
-                      <Icon icon="clarity:play-line" />
-                    </PlayButton>
-                  </ImageInfo>
-                </ImageInfoContainer>
-              );
-            })}
+        {!content.content.images ? (
+          <IconList>
+            {content.content.icons.map((element) => (
+              <IconAndName key={element.name}>
+                <Icon icon={element.src} style={styledIcons} />
+                <IconName>{element.name}</IconName>
+              </IconAndName>
+            ))}
+          </IconList>
+        ) : (
+          content.content.images.map((element) => (
+            <ImageInfoContainer key={element.name}>
+              <PlayButton
+                whileHover={{ scale: 0.95 }}
+                whileTap={{ scale: 0.85 }}
+                onClick={() =>
+                  projectDetails
+                    ? setprojectDetails(false)
+                    : setprojectDetails(true)
+                }
+              >
+                <ScreenShot src={element.src} />
+                {projectDetails && (
+                  <ProjectDetails
+                    handleClose={setprojectDetails(false)}
+                    projectId={element.id}
+                  />
+                )}
+                <PlayButtonIcon>
+                  <Icon icon="clarity:play-line" style={styledIcon} />
+                </PlayButtonIcon>
+              </PlayButton>
+              <ImageInfo>
+                <TitleAndDescription>
+                  <ImageInfoTitle>{element.name}</ImageInfoTitle>
+                  <ImageInfoDescription>{element.intro}</ImageInfoDescription>
+                </TitleAndDescription>
+              </ImageInfo>
+            </ImageInfoContainer>
+          ))
+        )}
       </ImageContainer>
     </Container>
   );
@@ -58,14 +64,27 @@ const Gallery = (content) => {
 const IconList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
 `;
-const PlayButton = styled.div`
-  text-align: left;
+const PlayButtonIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  border-radius: 5px;
   width: 100%;
-  margin: 1rem;
-  font-size: larger;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background: black;
 `;
-const TitleAndDescription = styled.div``;
+const TitleAndDescription = styled.div`
+  margin: 1rem;
+`;
 const ImageInfoDescription = styled.div``;
 const ImageInfoTitle = styled.div`
   text-align: left;
@@ -87,7 +106,6 @@ const ImageInfoContainer = styled.div`
   background: #282b30;
   border-radius: 1rem;
   padding: 2rem;
-  min-width: 75rem;
 `;
 const IconAndName = styled.div`
   display: flex;
@@ -107,7 +125,6 @@ const ImageContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 40rem;
 `;
 const Title = styled.div`
   font-weight: bolder;
@@ -119,15 +136,25 @@ const Text = styled.div`
 `;
 const Container = styled.div``;
 const ScreenShot = styled.img`
+  width: 100%;
+  height: 100%;
   width: 40rem;
   border-radius: 5px;
+`;
+const PlayButton = styled(motion.div)`
+  text-decoration: none;
+  color: white;
+  position: relative;
 `;
 const styledIcons = {
   width: '80px',
   height: '80px',
 };
-const styledLink = {
-  textDecoration: 'none',
-  color: 'white',
+
+const styledIcon = {
+  opacity: '1',
+  width: '40%',
+  height: '40%',
 };
+
 export { Gallery };
