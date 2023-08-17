@@ -34,10 +34,10 @@ const ListItem = styled.li``;
 const Container = styled.div`
   display: flex;
   justify-content: right;
-  height: 3rem;
-  padding: 10px;
+  align-items: center;
+  height: 5rem;
   background: #36393e;
-  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -46,6 +46,7 @@ const Container = styled.div`
 const List = styled.ul`
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -53,7 +54,7 @@ const List = styled.ul`
 const StyledLink = styled(HashLink)`
   text-decoration: none;
   color: #dadada;
-  margin: 2rem;
+  margin: 0 1rem;
 `;
 
 export { Header };

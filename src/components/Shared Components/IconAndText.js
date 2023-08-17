@@ -13,21 +13,22 @@ const IconAndText = (content) => {
 };
 
 const Text = styled.div`
-  width: 25rem;
+  width: 90%;
+  max-width: 30rem;
 `;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  margin: 5rem;
+  width: 90%;
+  max-width: 30rem;
 `;
 
 const iconStyle = {
   color: '#7289da',
-  width: '20rem',
-  height: '20rem',
+  width: '90%',
+  height: '90%',
 };
 
 export { IconAndText };

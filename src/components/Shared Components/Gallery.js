@@ -66,17 +66,17 @@ const IconList = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 40rem;
+  width: 70%;
+  max-width: 40rem;
 `;
 const PlayButtonIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40rem;
-  border-radius: 5px;
+  border-radius: 1rem;
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   opacity: 0.5;
@@ -92,7 +92,8 @@ const ImageInfoTitle = styled.div`
   font-size: x-large;
 `;
 const ImageInfo = styled.div`
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,20 +103,21 @@ const ImageInfoContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 5rem;
   background: #282b30;
   border-radius: 1rem;
   padding: 2rem;
+  max-width: 70rem;
+  width: 80%;
+  margin: 1%;
 `;
 const IconAndName = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
   padding: 1rem;
+  margin: 1%;
 `;
 const IconName = styled.div`
   margin: 1rem;
@@ -129,17 +131,16 @@ const ImageContainer = styled.div`
 const Title = styled.div`
   font-weight: bolder;
   font-size: larger;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 `;
 const Text = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 10rem;
 `;
 const Container = styled.div``;
 const ScreenShot = styled.img`
   width: 100%;
   height: 100%;
-  width: 40rem;
-  border-radius: 5px;
+  border-radius: 1rem;
 `;
 const PlayButton = styled(motion.div)`
   text-decoration: none;
@@ -147,8 +148,8 @@ const PlayButton = styled(motion.div)`
   position: relative;
 `;
 const styledIcons = {
-  width: '80px',
-  height: '80px',
+  width: '80%',
+  height: '90%',
 };
 
 const styledIcon = {
