@@ -6,18 +6,9 @@ const Contact = () => {
     <Container id="contact">
       <Title>Contact Me </Title>
       <Form>
-        <Wrapper>
-          <Label>Full Name: </Label>
-          <Input required />
-        </Wrapper>
-        <Wrapper>
-          <Label>Email Address: </Label>
-          <Input required type="email" />
-        </Wrapper>
-        <Wrapper>
-          <Label>Message:</Label>
-          <Input />
-        </Wrapper>
+        <Input placeholder="Name" required />
+        <Input placeholder="Email" required type="email" />
+        <TextArea placeholder="Message" />
         <SubmitButton whileHover={{ scale: 0.95 }} whileTap={{ scale: 0.85 }}>
           Submit
         </SubmitButton>
@@ -26,10 +17,26 @@ const Contact = () => {
   );
 };
 
+const TextArea = styled.textarea`
+  max-width: 20rem;
+  min-width: 20rem;
+  max-height: 8rem;
+  min-height: 8rem;
+  border: none;
+  border-radius: 0.2rem;
+  background: #282b30;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  margin: 1rem;
+`;
 const SubmitButton = styled(motion.button)`
   width: 30%;
-  max-width: 15rem;
-  margin: 2rem;
+  max-width: 6rem;
+  margin: 1rem;
   border: solid #7289da 0.3rem;
   background-color: #282b30;
   font-family: inherit;
@@ -39,22 +46,13 @@ const SubmitButton = styled(motion.button)`
   border-radius: 0.2rem;
 `;
 const Title = styled.div`
-  font-size: x-large;
-  margin-bottom: 1rem;
-`;
-const Wrapper = styled.div`
-  margin: 3%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-`;
-const Label = styled.label`
-  margin: 0 1.5rem;
+  font-size: xx-large;
+  margin-bottom: 2rem;
 `;
 const Input = styled.input`
   width: 100%;
-  max-width: 15rem;
+  max-width: 20rem;
+  margin: 1rem;
   border: none;
   border-radius: 0.2rem;
   background: #282b30;
@@ -67,14 +65,10 @@ const Input = styled.input`
 `;
 const Container = styled.div`
   justify-content: center;
-  display: grid;
   text-align: center;
   padding-top: 7rem;
 `;
 const Form = styled.div`
-  width: 100%;
-  max-width: 30rem;
-  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;

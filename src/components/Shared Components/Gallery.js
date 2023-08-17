@@ -28,8 +28,8 @@ const Gallery = (content) => {
           content.content.images.map((element) => (
             <ImageInfoContainer key={element.name}>
               <PlayButton
-                whileHover={{ scale: 0.95 }}
-                whileTap={{ scale: 0.85 }}
+                whileHover={{ scale: 0.99 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={() =>
                   projectDetails
                     ? setprojectDetails(false)
