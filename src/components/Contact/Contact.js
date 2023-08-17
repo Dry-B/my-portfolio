@@ -18,8 +18,8 @@ const Contact = () => {
 };
 
 const TextArea = styled.textarea`
-  max-width: 20rem;
-  min-width: 20rem;
+  max-width: 19rem;
+  width: 100%;
   max-height: 8rem;
   min-height: 8rem;
   border: none;
@@ -29,9 +29,11 @@ const TextArea = styled.textarea`
   font-size: inherit;
   font-weight: inherit;
   color: inherit;
-  cursor: pointer;
   outline: none;
   margin: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 const SubmitButton = styled(motion.button)`
   width: 30%;
@@ -50,8 +52,8 @@ const Title = styled.div`
   margin-bottom: 2rem;
 `;
 const Input = styled.input`
+  max-width: 19rem;
   width: 100%;
-  max-width: 20rem;
   margin: 1rem;
   border: none;
   border-radius: 0.2rem;
@@ -60,7 +62,7 @@ const Input = styled.input`
   font-size: inherit;
   font-weight: inherit;
   color: inherit;
-  cursor: pointer;
+  cursor: text;
   outline: none;
 `;
 const Container = styled.div`

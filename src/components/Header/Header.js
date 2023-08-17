@@ -1,27 +1,28 @@
 import styled from 'styled-components';
 import { HashLink } from 'react-router-hash-link';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
     <Container>
       <List>
-        <ListItem>
-          <StyledLink smooth to="#top">
+        <ListItem smooth to="#top">
+          <StyledLink whileHover={{ scale: 0.95 }} whileTap={{ scale: 0.85 }}>
             Top
           </StyledLink>
         </ListItem>
-        <ListItem>
-          <StyledLink smooth to="/#about">
+        <ListItem smooth to="/#about">
+          <StyledLink whileHover={{ scale: 0.95 }} whileTap={{ scale: 0.85 }}>
             About
           </StyledLink>
         </ListItem>
-        <ListItem>
-          <StyledLink smooth to="/#projects">
+        <ListItem smooth to="/#projects">
+          <StyledLink whileHover={{ scale: 0.95 }} whileTap={{ scale: 0.85 }}>
             Projects
           </StyledLink>
         </ListItem>
-        <ListItem>
-          <StyledLink smooth to="/#contact">
+        <ListItem smooth to="/#contact">
+          <StyledLink whileHover={{ scale: 0.95 }} whileTap={{ scale: 0.85 }}>
             Contact
           </StyledLink>
         </ListItem>
@@ -30,7 +31,7 @@ const Header = () => {
   );
 };
 
-const ListItem = styled.li``;
+const ListItem = styled(HashLink)``;
 const Container = styled.div`
   display: flex;
   justify-content: right;
@@ -51,10 +52,19 @@ const List = styled.ul`
   align-items: center;
   text-decoration: none;
 `;
-const StyledLink = styled(HashLink)`
+const StyledLink = styled(motion.button)`
   text-decoration: none;
   color: #dadada;
   margin: 0 1rem;
+  font-size: large;
+  background: inherit;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #dadada;
+  cursor: pointer;
+  outline: none;
 `;
 
 export { Header };
